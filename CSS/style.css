@@ -9,7 +9,7 @@ html, body {
 
 #navbar {
     font-family: monaco; 
-    background-color: #785B53; 
+    background-color: #FFC57B; 
     height: 50px; 
     margin-bottom: 0px;
     position: fixed;
@@ -25,15 +25,25 @@ html, body {
 }
 
 #navbar a {
-    color: #f8b739;
+    color: black;
 }
 
 #aboutMeSection {
-    background-color: #f8b739; 
     height: 100%;
     font-family: chalkduster;
     font-size: medium;
     padding-top: 100px;
+    background-image: url("/Image/IMG_2482.JPG");
+    background-size: 100%;
+    padding-left: 0px;
+}
+
+#aboutMeContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30%;
+    text-align: center;
 }
 
 #aboutMeSection img { 
