@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fenting Lin's Page</title>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="text/javascript" src="/JS/sendEmail.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+    
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <a class="navbar-brand">Me</a>
+    <button class="navbar-toggler" id="toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">icon</span>
+    </button>
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#aboutMeSection">About Me <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#educationSection">Educations</a>
+        </li>
+          
+        <li class="nav-item">
+            <a class="nav-link" href="#experienceSection">Experience</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contactSection">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    
+    <!-- About me -->
+    <div class="container-fluid text-center" id="aboutMeSection">
+        <h3><strong>Who AM I?</strong></h3>
+        <img src="Image/IMG_2263.JPG" class="img-responsive img-circle my-avatar">
+        <h4>I am Kiki</h4>
+        
+        <p>
+            I'm a Chinese Girl.<br>
+            Like singing, music, playing my phone and Programing!
+        </p>
+    </div>
+    
+    <!-- Education -->
+    <div class="container-fluid text-center" id="educationSection">
+        <h1><strong>Educations</strong></h1>
+
+        <div id="school">
+          <div id="psu">
+            <!-- <div id="skill1">Java</div> -->
+            <div><img src="Image/psu_logo.png"></div>
+            <div><p><strong>Portland State University</strong> - 2015 ~ 2019</p></div>
+            <br>
+            <p style="font-size: 18px;">Computer Science - Bachelor</p>
+          </div>
+
+          <div id="fjut">
+            <div><img src="Image/fjut_logo.PNG"></div>
+            <div><p><strong>Fujian Technology of University</strong> - 2013 ~ 2015</p></div>
+            <p style="font-size: 18px;">Software Engineer - Bachelor</p>
+          </div>
+        </div>
+    </div>
+    
+    <!-- Experience -->
+    <div class="container-fluid" id="experienceSection">
+        <h1 class="text-center"><strong>Experiences</strong></h1>
+        
+        <div class="row" id="expRow">
+          <div class="col" id="deepmarketCol">
+            <h4 class="text-center"><strong>Deep Market</strong></h4>
+            <ul>
+              <li>Provide machine module at a minimum cost for ~30 students taking machine learning class.</li>
+              <li>Support users lend their machine's computational resources or submit jobs for execution.</li>
+              <li>Developed an PyQt GUI which communicates with the backend JavaScript REST API and MongoDB.</li>
+              <li><a href="https://deepmarket.cs.pdx.edu/" target="_blank">Deepmarket</a></li>
+            </ul>
+          </div>
+
+          <div class="col" id="mozillaCol">
+            <h4 class="text-center"><strong>Mozilla Firefox</strong></h4>
+            <ul>
+              <li>Designed and developed a basal add-on toolkit called Gecko based on Inotify and FSEvents API.</li>
+              <li>Gecko toolkit monitors filesystem changes in the Linux and macOS filesystem.</li>
+              <li>Provides API hooks for extension and add-on developers.</li>
+              <li>Release an open-source product that supports programmers build the advanced extension.</li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+    
+    <!-- Contact -->
+    <div class="container-fluid text-center" id="contactSection">
+      <h2><strong>GET IN TOUCH</strong></h2>
+      <hr id="underline">
+        
+      <div id="inputSection">
+        <div id="nameAndEmail">
+          <div>
+            <input type="text" placeholder="Name" id="senderName">
+          </div>
+          <div>
+            <input type="text" placeholder="Email" id="senderEmail">
+          </div>
+        </div>
+
+        <div id="message">
+          <!-- <input type="text"  placeholder="Leave your message..."> -->
+          <textarea placeholder="Leave your message here..." id="emailBody"></textarea>
+        </div>
+
+        <button id="sendButton" onclick="send()">SEND MESSAGE</button>
+      </div>
+
+      <hr id="solidLine">
+      <!-- <hr id="solidLine"> -->
+      <p id="info">
+        Phone: 971-280-5628 | Email: linfenting@gmail.com
+      </p>
+    </div>
+</body>
+
+<script type="text/javascript">
+  function send(){
+    var name = $('#senderName').val();
+    var mail = $('#senderEmail').val();
+    var content = $('#emailBody').val() + "email is: " + mail;
+    var sub = "Hello from " + name;
+    location="mailto:"+"linfenting@gmail.com"+"?subject="+sub+"&body="+content;
+    console.log(name);
+}
+</script>
+</html>
