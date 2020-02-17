@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
 .container-fluid {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -8,6 +12,10 @@
     background-color: #785B53; 
     height: 50px; 
     margin-bottom: 0px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 999;
 }
 
 #navbar button, 
@@ -22,9 +30,10 @@
 
 #aboutMeSection {
     background-color: #f8b739; 
-    height: 680px;
+    height: 100%;
     font-family: chalkduster;
     font-size: medium;
+    padding-top: 100px;
 }
 
 #aboutMeSection img { 
@@ -39,7 +48,7 @@
 #educationSection {
    position: relative;
     background-color: #042f4b; 
-    height: 450px;
+    height: 70%;
     font-family: cursive;
     font-size: 22px;
     color: white;
@@ -91,13 +100,19 @@
 
 #experienceSection {
     background-color: #445c3c; 
-    height: 500px;
+    height: 90%;
     font-family: monospace;
+}
+
+@media (min-width: 993px) {
+    #experienceSection { 
+        height: 80%;
+    }
 }
 
 #expRow div {
     width: 150px;
-    height: 330px;
+    height: 80%;
     background-color: #faf5e4;
     margin-top: 30px;
     margin-left: 30px;
@@ -106,8 +121,8 @@
     font-family: monospace;
     font-size: 18px;
 
-    border-width:5px;  
-    border-style:dashed;
+    border-width: 5px;  
+    border-style: dashed;
 }
 
 #contactSection {
@@ -142,17 +157,20 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 20px;
     margin-top: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nameAndEmail input {
-    width: 400px;
+    width: 100%;
     background-color: #faf5e4;
     border: none;
 }
 
 #message textarea{
     height: 150px; 
-    width: 880px; 
+    width: 100%; 
     border: none;
     background-color: #faf5e4;
 }
