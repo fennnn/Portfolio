@@ -69,6 +69,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
+
     transform: scaleX(0);
     transform-origin: left;
     animation: slide-in-out 2s cubic-bezier(0.75, 0, 0, 1) forwards;
@@ -139,16 +140,16 @@ html, body {
     justify-content: center;
     position: relative;
     /* background-color: #042f4b;  */
-    background-image: url("/Image/edu.PNG");
-    background-size: 115%;
-    height: 100%;
+    background-image: url("/Image/edu.GIF");
+    background-size: cover;
+    height: 90%;
     font-family: cursive;
     font-size: 22px;
     color: white;
 }
 
 #eduContent p {
-    color: #445c3c; 
+    color: white; 
 }
 
 #eduContent {
@@ -194,8 +195,10 @@ html, body {
 }
 
 #experienceSection {
-    background-color: #445c3c; 
-    height: 90%;
+    /* background-color: #445c3c;  */
+    background-image: url("/Image/exp.GIF");
+    background-size: contain;
+    height: 100%;
     font-family: monospace;
 }
 
