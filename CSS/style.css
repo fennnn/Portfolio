@@ -26,6 +26,7 @@ html, body {
 
 #navbar a {
     color: black;
+    padding-left: 30px;
 }
 
 #aboutMeSection {
@@ -55,9 +56,60 @@ html, body {
     border-radius: 50%;
 } 
 
+.slide-bar {
+    position: relative;
+    color: transparent;
+    animation: fill-text-black 2s 1.6s forwards;
+}
+
+.slide-bar::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: slide-in-out 2s cubic-bezier(0.75, 0, 0, 1) forwards;
+  }
+
+  .title::before {
+    background: #FCC3A4;
+  }
+
+  .subtitle {
+    animation-delay: 3.2s;
+  }
+  .subtitle::before {
+    background: #FFC57B;
+    animation-delay: 2s;
+  }
+@keyframes slide-in-out {
+    50% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    50.1% {
+      transform-origin: right;
+    }
+    100% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+  }
+  @keyframes fill-text-black {
+    to {
+      color: black;
+    }
+  }
+
 #educationSection {
-   position: relative;
-    background-color: #042f4b; 
+    position: relative;
+    /* background-color: #042f4b;  */
+    background-image: url("/Image/IMG_2481.JPG");
+    background-size: 100%;
+
     height: 70%;
     font-family: cursive;
     font-size: 22px;
@@ -137,6 +189,7 @@ html, body {
 
 #contactSection {
     background-color: #e9eec9;
+
     color: #445c3c; 
     height: 550px;
 }
@@ -147,6 +200,13 @@ html, body {
     font-weight: bold; 
     font-family: monospace;
     margin-bottom: 20px;
+}
+#seeyouSection > div {
+    display: inline-block;
+}
+
+#contactSection img {
+    padding-left: 30px;
 }
 
 #underline {
