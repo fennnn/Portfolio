@@ -126,8 +126,12 @@ html, body {
     width: 320px;
     height: 300px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 50px;
+}
+
+#portland p {
+    font-family: fantasy;
 }
 
 #educationSection {
@@ -135,19 +139,24 @@ html, body {
     justify-content: center;
     position: relative;
     /* background-color: #042f4b;  */
-    background-image: url("/Image/edu.GIF");
-    background-size: cover;
-
-    height: 80%;
+    background-image: url("/Image/edu.PNG");
+    background-size: 115%;
+    height: 100%;
     font-family: cursive;
     font-size: 22px;
     color: white;
+}
+
+#eduContent p {
+    color: #445c3c; 
 }
 
 #eduContent {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8%;
+    margin-left: 8%;
 }
 
 #eduContent > img {
@@ -212,14 +221,15 @@ html, body {
 }
 
 #contactSection {
-    background-color: #e9eec9;
-
-    color: #445c3c; 
-    height: 550px;
+    /* background-color: #e9eec9; */
+    background-image: url("/Image/contact.GIF");
+    background-size: contain;
+    color:white; 
+    height: 70%;
 }
 
 #contactSection p {
-    color: #445c3c; 
+    color: white; 
     font-size: 18px; 
     font-weight: bold; 
     font-family: monospace;
@@ -234,7 +244,7 @@ html, body {
 }
 
 #underline {
-    border: 3px solid #445c3c;
+    border: 3px solid white;
     width: 5%;
     border-radius: 5px;
 }
@@ -244,7 +254,7 @@ html, body {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 20px;
-    background-color: #faf5e4;
+    background-color: transparent;
 }
 
 #inputSection {
@@ -258,26 +268,38 @@ html, body {
 
 #nameAndEmail input {
     width: 100%;
-    background-color: #faf5e4;
-    border: none;
+    background-color: transparent;
+    /* border: none; */
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+#nameAndEmail input::placeholder{
+    color: white;
 }
 
 #message textarea{
     height: 150px; 
     width: 100%; 
-    border: none;
-    background-color: #faf5e4;
+    /* border: none; */
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 3px;
 }
 
+#message textarea::placeholder{
+    color: white;
+}
 #sendButton {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
     background-color: Transparent;
+    color: white;
 }
 
 #solidLine {
-    border: 1px solid #445c3c;
+    border: 1px solid white;
     width: 90%;
     border-radius: 5px;
     margin-bottom: 20px;
